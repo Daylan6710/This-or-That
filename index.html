@@ -17,7 +17,7 @@ Timothy Riedel
 triedel@utexas.edu
  
 Brief Description of Goal of Code:
-This an app that help descipher if you have cold or allergies do not DIAGNOSE ANY KIND OF MEDICAL<!--Goal of code and issues-->
+This an app that help descipher if you have an meniscus tear or ACLTear do not DIAGNOSE ANY KIND OF MEDICAL<!--Goal of code and issues-->
 	
 Known Issues:
 no known issues 
@@ -34,26 +34,26 @@ no known issues
 
 
 <script>
-        var allergy_count = 0;
-        var cold_count = 0;
-		var allergy_percent = 0;
-		var cold_percent = 0;
+        var ACLTear_count = 0;
+        var MeniscusTear_count = 0;
+		var ACLTear_percent = 0;
+		var MeniscusTear_count = 0;
 
-        function allergyAdd(){
-            allergy_count = allergy_count + 1;
-			alert("allergy_count is " + allergy_count + "\ncold_count is " + cold_count);
+        function ACLTearAdd(){
+            ACLTear_count = ACLTear_count + 1;
+			alert("ACLTear_count is " + ACLTear_count + "\n_count is " + MeniscusTear_count);
         }
 
-        function coldAdd(){
-            cold_count = cold_count + 1;
-			alert("allergy_count is " + allergy_count + "\ncold_count is " + cold_count); <!--added the score or tally system i think-->
+        function MeniscusTearAdd(){
+            MeniscusTear_count = MeniscusTear_count + 1;
+			alert("ACLTear_count is " + ACLTear_count + "\nMeniscusTear_count is " + MeniscusTear_count); <!--added the score or tally system i think-->
         }
 
 		function changetext(){
-			var allergy_percent = allergy_count/(allergy_count + cold_count)*100;
-			var cold_percent = cold_count/(allergy_count + cold_count)*100;
+			var ACLTear_percent = ACLTear_count/(ACLTear_count + MeniscusTear_count)*100;
+			var MeniscusTear_percent = MeniscusTear_count/(ACLTear_count + MeniscusTear_count)*100;
 			var initialText = document.getElementById("results");
-			initialText.innerHTML = "Probability it is allergies = " + allergy_percent + "% <br> Probability it is a cold = " + cold_percent + "%" <!--added percent-->
+			initialText.innerHTML = "Probability it is an ACLTear = " + ACLTear_percent + "% <br> Probability it is a MeniscusTear = " + MeniscusTear_percent + "%" <!--added percent-->
 		} 
 
   </script>
@@ -72,7 +72,7 @@ no known issues
     left: -100vw;
     overflow-y: auto;
     z-index: 0;
-    background-color: hsl(0, 30%, 53%);
+    background-color: hsl(0, 79%, 74%);
 }
 
   .page:target {
@@ -88,14 +88,14 @@ footer {
 </style>
 
 <body>
-<div id="header" class="w3-container w3-pink><!--title change and pink header-->
+<div id="header" class="w3-container w3-pink"><!--title change and pink header-->
 	<h1>ACL or Meniscus Tear😼?</h1>
 </div>
 	
 <div id="content" class="w3-container">
 	<p>Are you feeling like you might have an Acl or meniscus Tear🦵. Answer a few short questions to find out if knee is cooked!</p>
 	
-	<a href="#one" class="w3-btn w3-pink w3-round"> Get Started </a>
+	<a href="#one" class="w3-btn w3-purple 3-round"> Get Started </a>
 	
 	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
  	
@@ -109,9 +109,9 @@ footer {
 	</div>
 	
     	<div id="content" class="w3-container">
-        <p>Are you feeling fatigued?</p> <!--changed to question 2 and to pink-->
-        <a href="#two" onclick="coldAdd()" class="w3-btn w3-purple w3-round"> yes</a>
-        <a href="#two" onclick="allergyAdd()" class="w3-btn w3-pink w3-round"> no</a>  <!--yes+no purple pink-->
+        <p>Can you fully bend your knee?</p> <!--changed to question 2 and to pink-->
+        <a href="#two" onclick="ACLTearAdd()" class="w3-btn w3-flat-pumpkin w3-round"> yes</a>
+        <a href="#two" onclick="MeniscusTearAdd()" class="w3-btn w3-flat-pomegranate w3-round"> no</a>  <!--yes+no purple pink-->
     	</div>
 </div>
 
@@ -122,8 +122,8 @@ footer {
 	
 <div id="content" class="w3-container">
 		<p>Do you have ichy eyes,nose,or throat?</p>
-        <a href="#three" onclick="allergyAdd()"class="w3-btn w3-purple w3-square"> yes </a>
-        <a href="#three" onclick="coldAdd()"class="w3-btn w3-pink w3-square"> no</a>
+        <a href="#three" onclick="ACLTearAdd()"class="w3-btn w3-purple w3-square"> yes </a>
+        <a href="#three" onclick="MeniscusTearAdd()"class="w3-btn w3-pink w3-square"> no</a>
 	</div>
 </div>	
 
@@ -134,8 +134,8 @@ footer {
 	
 	<div id="content" class="w3-container">
 		<p>Do you have watery, red, eyes?</p>
-        <a href="#four"  onclick="allergyAdd()"class="w3-btn w3-purple w3-round"> yes </a>
-        <a href="#four"  onclick="coldAdd()"class="w3-btn w3-pink w3-round"> no</a>
+        <a href="#four"  onclick="ACLTearAdd()"class="w3-btn w3-purple w3-round"> yes </a>
+        <a href="#four"  onclick="MeniscusTearAdd()"class="w3-btn w3-pink w3-round"> no</a>
 	</div>
 </div>	
 
@@ -146,8 +146,8 @@ footer {
 	
 	<div id="content" class="w3-container">
 		<p>Do you have a sore throat?</p>
-        <a href="#five"  onclick="coldAdd()"class="w3-btn w3-purple w3-round"> yes </a>
-        <a href="#five"  onclick="allergyAdd()"class="w3-btn w3-pink w3-round"> no</a>
+        <a href="#five"  onclick="MeniscusTearAdd()"class="w3-btn w3-purple w3-round"> yes </a>
+        <a href="#five"  onclick="ACLTearAdd()"class="w3-btn w3-pink w3-round"> no</a>
 	</div>
 </div>
 
@@ -158,8 +158,8 @@ footer {
 	
 	<div id="content" class="w3-container">
 		<p>Do you have a cough</p>
-        <a href="#six"  onclick="coldAdd()"class="w3-btn w3-purple w3-round"> yes </a>
-        <a href="#six"  onclick="allergyAdd()"class="w3-btn w3-pink w3-round"> no</a>
+        <a href="#six"  onclick="MeniscusTearAdd()"class="w3-btn w3-purple w3-round"> yes </a>
+        <a href="#six"  onclick="ACLTearAdd()"class="w3-btn w3-pink w3-round"> no</a>
 	</div>
 </div>	
 
@@ -169,9 +169,9 @@ footer {
 	</div>
 	
 	<div id="content" class="w3-container">
-		<p>Do you have body aches</p><!--made it say if yes cold or allergy thing-->
-        <a href="#seven"  onclick="coldAdd()"class="w3-btn w3-purple w3-round"> yes</a> <!--added questions-->
-        <a href="#seven"  onclick="allergyAdd()"class="w3-btn w3-pink w3-round"> no</a> <!--purple and pink buttions yes and no-->
+		<p>Do you have body aches</p><!--made it say if yes MeniscusTear or ACLTear thing-->
+        <a href="#seven"  onclick="MeniscusTearAdd()"class="w3-btn w3-purple w3-round"> yes</a> <!--added questions-->
+        <a href="#seven"  onclick="ACLTearAdd()"class="w3-btn w3-pink w3-round"> no</a> <!--purple and pink buttions yes and no-->
 	</div>
 </div>	
 
@@ -186,7 +186,7 @@ footer {
 	</div>
 </div>	
 
-<footer class="w3-bottom w3-container w3-red"><!--red and pink header-->
+<footer class="w3-bottom w3-container w3-flat-clouds  "><!--red and pink header-->
 	<p>DIY😼!</p>
 </footer>
 
